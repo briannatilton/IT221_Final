@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pages',
 ]
+
+Vincent, William S.. Django for Beginners: Build websites with Python and Django (p. 36). WelcomeToCode. Kindle Edition.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
