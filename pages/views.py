@@ -10,8 +10,8 @@ class AboutPageView(TemplateView):
 
 
 class LoginPageView(TemplateView):
-    template_name = 'login.html'
+    template_name = 'Registration/login.html'
 
 
 class SignUpPageView(TemplateView):
-    template_name = 'signup.html'
+    template_name = 'Registration/signup.html'
