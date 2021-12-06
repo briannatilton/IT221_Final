@@ -33,6 +33,7 @@
         </ul>
         <ul class="nav">
             <li class="nav-item"><a href="{% url 'login' %}" class="nav-link link-dark px-2">Login</a></li>
+
             <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link link-dark px-2">Sign up</a></li>
         </ul>
     </div>
@@ -48,7 +49,6 @@
     </div>
 </header>
 <!-- End of header-->
-
 
 
 
@@ -83,7 +83,15 @@
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                 <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
                 <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><a href="{% url 'login' %}" class="text-muted">Login</a></li>
+                    <div class="pb-2">
+                        {% if user.is_authenticated %}
+                            <p>Hi {{ user.username }}!</p>
+                            <a href="{% url 'logout' %}"class="text-muted">Log out</a>
+                        {% else %}
+                            <p> </p>
+                            <a href="{% url 'login' %}"class="text-muted">Log In</a>
+                        {% endif %}
+                    </div>
                     <li class="mb-2"><a href="{% url 'signup' %}" class="text-muted">Sign up</a></li>
                 </ul>
             </div>
@@ -112,8 +120,6 @@
 <!--End -->
 </div>
 
-</body>
-</html>
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
