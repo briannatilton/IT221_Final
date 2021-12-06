@@ -32,13 +32,12 @@
             </div>
         </ul>
         <ul class="nav">
-                    <div class="nav-item">
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'logout' %}"class="nav-link link-dark px-2">Log Out</a>
-                        {% else %}
-                            <a href="{% url 'login' %}"class="nav-link link-dark px-2">Log In</a>
-                        {% endif %}
-                    </div>
+           {% if user.is_authenticated %}
+              <p class="nav-link link-dark px-2">Hi {{ user.username }} </p>
+              <a href="{% url 'logout' %}"class="nav-link link-dark px-2">Log Out</a>
+            {% else %}
+              <a href="{% url 'login' %}"class="nav-link link-dark px-2">Log In</a>
+            {% endif %}
             <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link link-dark px-2">Sign up</a></li>
         </ul>
     </div>
@@ -90,10 +89,8 @@
                 <ul class="list-unstyled mb-0">
                     <div class="pb-2">
                         {% if user.is_authenticated %}
-                            <p class="text-muted">Hi {{ user.username }} </p>
                             <a href="{% url 'logout' %}"class="text-muted">Log Out</a>
                         {% else %}
-                            <p> </p>
                             <a href="{% url 'login' %}"class="text-muted">Log In</a>
                         {% endif %}
                     </div>
