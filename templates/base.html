@@ -20,17 +20,6 @@
             <li class="nav-item"><a href="{% url 'home' %}" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="{% url 'about' %}" class="nav-link link-dark px-2">About</a></li>
             <!-- Add dropdown button for categories -->
-            <div class="dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Recipe Categories
-            </a>
-            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Breakfast</a></li>
-                <li><a class="dropdown-item" href="#">Lunch</a></li>
-                <li><a class="dropdown-item" href="#">Dinner</a></li>
-                <li><a class="dropdown-item" href="#">Dessert</a></li>
-            </ul>
-            </div>
         </ul>
         <ul class="nav">
            {% if user.is_authenticated %}
@@ -70,17 +59,8 @@
             <div class="col-lg-8 col-md-6 mb-4 mb-lg-0">
                 <p class="font-italic text-dark">At the Whisk Network, you can learn to cook and share your passion for food all in one place! Consider making an account today to gain access to exclusive content.</p>
                 <dt class="font-italic text-dark">Exclusive Content:</dt>
-                <dd class="font-italic text-dark">-> Add your own recipes without having to submit it for admin review</dd>
-                <dd class="font-italic text-dark">-> Comment or give suggestions to others recipes</dd>
-            </div>
-            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                <h6 class="text-uppercase font-weight-bold mb-4">Categories</h6>
-                <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><a href="#" class="text-warning">Breakfast </a></li>
-                    <li class="mb-2"><a href="#" class="text-warning">Lunch</a></li>
-                    <li class="mb-2"><a href="#" class="text-warning">Dinner</a></li>
-                    <li class="mb-2"><a href="#" class="text-warning">Dessert</a></li>
-                </ul>
+                <dd class="font-italic text-dark">* Add your own recipes without having to submit it for admin review</dd>
+                <dd class="font-italic text-dark">* Comment or give suggestions to others recipes</dd>
             </div>
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                 <h6 class="text-uppercase font-weight-bold mb-4">Account</h6>

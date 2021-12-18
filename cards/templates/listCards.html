@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <h2 class="p-4">Featured Recipes of the Week</h2>
+        <table>
+        {% for Card in object_list %}
+            <tr>
+            <td>{{ Card.title }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+</div>
+
+    <!-- End of cards-->
+
+{% endblock content %}
