@@ -1,0 +1,43 @@
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+
+{% block title %}Whisk Network: Login{% endblock %}
+
+{% block content %}
+   <div class="row">
+        <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+            <div class="px-5">
+                <h2>Log In</h2>
+                <form method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button type="submit">Log In</button>
+                </form>
+            </div>
+        </div>
+       <div class="col-lg-20 col-md-6 mb-4 mb-lg-0">
+           <div>
+               <figure>
+                  <blockquote class="blockquote">
+                      <p>"Cooking is all about people. Food is maybe the only universal thing that really has the power
+                        to bring everyone together. No matter what culture, everywhere around the world, people eat
+                        together.”
+                      </p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer">
+                    Guy Fieri
+                  </figcaption>
+               </figure>
+               <figure>
+                  <blockquote class="blockquote">
+                      <p>"A recipe has no soul. You as the cook must bring soul to the recipe."
+                      </p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer">
+                      Thomas Keller
+                  </figcaption>
+               </figure>
+           </div>
+       </div>
+   </div>
+{% endblock content %}
